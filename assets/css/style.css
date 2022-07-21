@@ -505,9 +505,6 @@ header {
     transform: translateX(0);
   }
 }
-.header-navigation.active .btn-menu path {
-  fill: #FFFFFF;
-}
 
 footer {
   padding: 40px 0 100px;
