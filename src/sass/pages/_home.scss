@@ -1,0 +1,480 @@
+// Home Page SCSS here
+.hero-section {
+    background-repeat: no-repeat;
+    padding-top: 145px;
+    position: relative;
+    @include tablet {
+        padding-top: 105px;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -1637px;
+        width: 2861px;
+        height: 2963px;
+        background-size: 2861px 2963px;
+        background-image: url(../../assets/images/svg/header-bg.svg);
+        z-index: -1;
+        margin-left: -270px;
+        @include laptop {
+            top: -1687px;
+        }
+        @include tablet {
+            top: -1247px;
+        }
+        @include mobile {
+            top: -1737px;
+        }
+    }
+}
+
+.hero-block {
+    display: flex;
+    @include tablet {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 510px;
+    flex-shrink: 0;
+    margin-top: 77px;
+    @include tablet {
+        align-items: center;
+        margin-top: 17px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    @include mobile {
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+    & h1 {
+        font-weight: 400;
+        font-size: 97px;
+        line-height: 100px;
+        margin-bottom: 27px;
+        letter-spacing: -2px;
+        & span {
+            font-weight: 500;
+        }
+        @include mobile {
+            font-size: 57px;
+            line-height: 60px;
+            margin-bottom: 22px;
+        }
+    }
+    & h4 {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 43px;
+        margin-bottom: 40px;
+        position: relative;
+        z-index: 1;
+        @include mobile {
+            font-size: 23px;
+            line-height: 30px;
+            margin-bottom: 20px;
+        }
+        &::after {
+            position: absolute;
+            background-image: url(../../assets/images/svg/underline.svg);
+            width: 245px;
+            height: 30px;
+            background-size: contain;
+            right: -26px;
+            bottom: -13px;
+            z-index: -1;
+            content: '';
+            background-repeat: no-repeat;
+            @include tablet {
+                bottom: -9px;
+                width: 175px;
+                height: 20px;
+            }
+        }
+    }
+    & p {
+        max-width: 430px;
+        position: relative;
+        z-index: 1;
+        @include mobile {
+            max-width: 300px;
+        }
+        &::after {
+            position: absolute;
+            background-image: url(../../assets/images/svg/highlight.svg);
+            width: 15px;
+            height: 16px;
+            background-size: contain;
+            right: -1px;
+            bottom: 20px;
+            z-index: -1;
+            content: '';
+            background-repeat: no-repeat;
+            @include mobile {
+                width: 12px;
+                height: 12px;
+                bottom: 11px;
+                right: 95px;
+            }
+        }
+    }
+}
+
+.hero-image {
+    position: relative;
+    top: -51px;
+    left: 40px;
+    @include laptop {
+        left: -40px;
+    }
+    @include tablet {
+        left: 0;
+        top: 0;
+    }
+    & img {
+        max-width: initial;
+        @include tablet {
+            max-width: 736px;
+            margin: 0 auto;
+            @include mobile {
+                max-width: 343px;
+            }
+        }
+    }
+}
+
+.services-section {
+    margin-top: -282px;
+    position: relative;
+    z-index: 1;
+    @include tablet {
+        margin-top: 0;
+    }
+    @include mobile {
+        padding-top: 30px;
+    }
+}
+
+.service-block {
+    display: grid;
+    grid-template-columns: 243px 243px 243px;
+    column-gap: 31px;
+    row-gap: 42px;
+    @include tablet {
+        grid-template-columns: 243px 243px;
+        justify-content: center;
+    }
+    @include mobile {
+        grid-template-columns: minmax(120px, 169px) minmax(120px, 169px);
+        justify-items: center;
+        column-gap: 15px;
+        row-gap: 20px;
+    }
+}
+
+.service-item {
+    background-color: $secondary;
+    border-radius: 10px;
+    width: 243px;
+    height: 306px;
+    display: flex;
+    flex-direction: column;
+    padding: 48px 32px 37px;
+    position: relative;
+    @include mobile {
+        width: 100%;
+        height: 220px;
+        padding: 20px 20px 20px;
+    }
+    &:nth-child(2) {
+        top: 60px;
+        @include tablet {
+            top: 140px;
+        }
+        @include mobile {
+            top: 120px;
+        }
+    }
+    &:nth-child(5) {
+        top: 60px;
+        @include tablet {
+            top: 0;
+        }
+    }
+    &:nth-child(3) {
+        top: 297px;
+        @include tablet {
+            top: 0;
+        }
+    }
+    &:nth-child(4) {
+        @include tablet {
+            top: 140px;
+        }
+        @include mobile {
+            top: 120px;
+        }
+    }
+    & .service-icon {
+        position: relative;
+        z-index: 1;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 65px;
+            height: 65px;
+            background-color: $primary;
+            border-radius: 50%;
+            bottom: -13px;
+            z-index: -1;
+            @include mobile {
+                width: 45px;
+                height: 45px;
+            }
+        }
+        & img {
+            @include mobile {
+                width: 45px;
+                height: 45px;
+            }
+        }
+    }
+    & h3 {
+        margin-top: auto;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 27px;
+        margin-bottom: 8px;
+        @include mobile {
+            font-size: 18px;
+            line-height: 23px;
+            margin-bottom: 3px;
+        }
+    }
+    & p {
+        line-height: 27px;
+    }
+    & .new-service {
+        position: absolute;
+        top: 105px;
+        right: 93px;
+        @include mobile {
+            top: 65px;
+            right: 63px;
+            width: 31px;
+        }
+    }
+}
+
+.qoute-section {
+    padding: 168px 0 0;
+    @include tablet {
+        padding: 108px 0 108px;
+    }
+    @include mobile {
+        padding: 80px 0 30px;
+    }
+}
+
+.qoute-block {
+    display: flex;
+    justify-content: center;
+    @include tablet {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
+
+.qoute-image {
+    position: relative;
+    margin-left: -264px;
+    left: -20px;
+    @include laptop {
+        margin-left: -334px;
+        left: 0px;
+    }
+    @include tablet {
+        margin-left: -7px;
+    }
+    & img {
+        max-width: initial;
+        @include tablet {
+            max-width: 786px;
+            margin: 0 auto;
+        }
+        @include mobile {
+            max-width: 375px;
+        }
+    }
+}
+
+.qoute-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 120px;
+    @include tablet {
+        margin-top: 0;
+        align-items: center;
+    }
+    @include mobile {
+        margin-bottom: 20px;
+    }
+    & img {
+        margin-bottom: 33px;
+        margin-left: 20px;
+        @include tablet {
+            margin-left: 0;
+        }
+        @include mobile {
+            width: 60px;
+            margin-bottom: 20px;
+        }
+    }
+    & h2 {
+        font-weight: 400;
+        font-size: 64px;
+        line-height: 74px;
+        margin-bottom: 34px;
+        flex-shrink: 0;
+        width: 548px;
+        letter-spacing: -1px;
+        @include tablet {
+            text-align: center;
+        }
+        @include mobile {
+            font-size: 34px;
+            line-height: 41px;
+            margin-bottom: 16px;
+            width: 300px;
+        }
+    }
+    & p {
+        max-width: 469px;
+        @include tablet {
+            text-align: center;
+        }
+    }
+}
+
+.budget-section {
+    padding: 92px 0 380px;
+    position: relative;
+    @include tablet {
+        padding: 92px 0 220px;
+    }
+    @include mobile {
+        padding: 92px 0 92px;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -553px;
+        width: 2861px;
+        height: 2268px;
+        background-size: 2861px 2268px;
+        background-image: url(../../assets/images/svg/free-bg.svg);
+        z-index: -1;
+        margin-left: -120px;
+        background-repeat: no-repeat;
+        @include tablet {
+            top: -471px;
+            background-size: 2861px 2018px;
+        }
+        @include mobile {
+            transform: translateX(-50%) scale(0.5);
+            top: -664px;
+            background-size: 2861px 1758px;
+        }
+    }
+}
+
+.budget-block {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.budget-image {
+    position: relative;
+    left: -35px;
+    @include tablet {
+        left: 0;
+    }
+    & img {
+        max-width: initial;
+        @include tablet {
+            max-width: 736px;
+            margin: 0 auto;
+        }
+        @include mobile {
+            max-width: 375px;
+        }
+    }
+}
+
+.budget-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 798px;
+    & img {
+        @include mobile {
+            width: 65px;
+        }
+    }
+    & h3 {
+        font-weight: 400;
+        font-size: 64px;
+        line-height: 74px;
+        margin-bottom: 44px;
+        margin-top: 5px;
+        letter-spacing: -1px;
+        @include mobile {
+            font-size: 26px;
+            line-height: 38px;
+            margin-bottom: 16px;
+            margin-top: 0;
+        }
+    }
+    & h5 {
+        font-weight: 300;
+        font-size: 50px;
+        line-height: 30px;
+        position: relative;
+        z-index: 1;
+        @include mobile {
+            font-size: 26px;
+            line-height: 30px;
+        }
+        &::after {
+            position: absolute;
+            background-image: url(../../assets/images/svg/underline-2.svg);
+            width: 398px;
+            height: 53px;
+            background-size: contain;
+            right: -58px;
+            bottom: -41px;
+            z-index: -1;
+            content: '';
+            background-repeat: no-repeat;
+            @include mobile {
+                width: 208px;
+                height: 53px;
+                right: -28px;
+                bottom: -36px;
+            }
+        }
+    }
+}

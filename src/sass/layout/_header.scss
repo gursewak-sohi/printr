@@ -1,0 +1,214 @@
+// Header SCSS
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.header-navigation {
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+    position: relative;
+    @include tablet {
+        padding: 30px 0;
+    }
+    @include mobile {
+        padding: 20px 0;
+    }
+    & .logo {
+        & img {
+            @include mobile {
+                width: 90px;
+            }
+        }
+    }
+}
+
+.btn-menu {
+    display: none;
+    margin-left: auto;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    top: -2px;
+    @include tablet {
+        display: block;
+    }
+    & span {
+        width: 28px;
+        height: 2px;
+        margin-bottom: 5px;
+        background-color: $black;
+        display: flex;
+    }
+}
+
+.btn-close {
+    position: absolute;
+    right: 24px;
+    top: 36px;
+    height: 28px;
+    width: 28px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+    @include tablet {
+        display: block;
+    }
+    @include mobile {
+        top: 28px;
+    }
+    & span {
+        width: 28px;
+        height: 2px;
+        display: flex;
+        background-color: $white;
+        &:first-child {
+            transform: rotate(-45deg) translateX(-2px);
+        }
+        &:last-child {
+            transform: rotate(45deg) translateX(-1px);
+        }
+    }
+}
+
+.menu-items {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    line-height: 27px;
+    margin-left: 68px;
+    flex: 1;
+    transition: 0.2s all ease-in-out;
+    @include laptop {
+        margin-left: 0;
+    }
+    @include tablet {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(100%);
+        position: fixed;
+        width: 90%;
+        background-color: rgba($black, 95%);
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 89;
+        padding: 90px 50px 50px;
+        flex-direction: column;
+        align-items: flex-start;
+        overflow: auto;
+    }
+    @include mobile {
+        padding: 70px 35px 40px;
+        font-size: 18px;
+        line-height: 20px;
+    }
+    & a {
+        color: $black;
+        padding: 2px 0;
+        @include tablet {
+            color: $white;
+        }
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+    & ul {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        margin-right: auto;
+        @include laptop {
+            margin-left: auto;
+        }
+        @include tablet {
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 0 0 70px;
+        }
+        & li:not(:last-child) {
+            margin-right: 45px;
+            @include tablet {
+                margin-right: 0;
+                margin-bottom: 45px;
+            }
+            @include mobile {
+                margin-bottom: 35px;
+            }
+        }
+        & .new-item {
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                width: 29px;
+                height: 29px;
+                background-image: url(../../assets/images/svg/new-header.svg);
+                background-size: contain;
+                top: -38px;
+                left: 50%;
+                transform: translateX(-50%);
+                @include tablet {
+                    width: 20px;
+                    height: 20px;
+                    top: -24px;
+                }
+            }
+        }
+    }
+    & .menu-links {
+        display: flex;
+        align-items: center;
+        padding-right: 16px;
+        @include laptop {
+            padding-right: 0;
+        }
+        @include tablet {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        & a {
+            display: flex;
+            align-items: center;
+            &:not(:first-child) {
+                margin-left: 32px;
+                @include tablet {
+                    margin-left: 0;
+                    margin-top: 40px;
+                }
+                @include mobile {
+                    margin-top: 30px;
+                }
+            }
+            & img {
+                margin-right: 7px;
+                @include tablet {
+                    filter: brightness(100%) invert(100%);
+                }
+            }
+        }
+    }
+}
+
+.header-navigation {
+    &.active {
+        .menu-items {
+            @include tablet {
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(0);
+            }
+        }
+        & .btn-menu {
+            & path {
+                fill: $white;
+            }
+        }
+    }
+}

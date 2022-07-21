@@ -1,0 +1,25 @@
+// Variable SCSS
+// Fonts
+$font-outfit: ('Outfit', sans-serif);
+// Colors
+$primary: #FFC32D;
+$secondary: #FFEAAF;
+$white: #FFFFFF;
+$black: #000000;
+$link: #000000;
+// Breakpoints
+$mobile-width: 767px;
+$tablet-width: 991px;
+$laptop-width: 1199px;
+$desktop-width: 1399px;
+// Container Sizes
+$container: 1284px;
+$container-lg: 1334px;
+$gutter-x: 32px;
+$gutter-x-xs: 16px;
+// Transition
+$link-transition: 200ms all ease;
+$btn-transition: 300ms background-color ease,
+300ms color ease,
+300ms border-color ease,
+300ms opacity ease;

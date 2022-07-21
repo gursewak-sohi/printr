@@ -1,0 +1,31 @@
+// Typography SCSS
+a {
+    color: $link;
+    &:hover {
+        color: darken($link, 10%);
+    }
+}
+
+b,
+strong {
+    font-weight: 700;
+}
+
+body {
+    font-family: $font-outfit;
+    font-weight: 400;
+    color: $black;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+}
+
+p {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    @include mobile {
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
