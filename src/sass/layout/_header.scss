@@ -35,6 +35,7 @@ header {
     cursor: pointer;
     position: relative;
     top: -2px;
+    padding: 0;
     @include tablet {
         display: block;
     }
