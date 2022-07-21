@@ -724,7 +724,7 @@ footer {
   width: 15px;
   height: 16px;
   background-size: contain;
-  right: -1px;
+  right: 2px;
   bottom: 20px;
   z-index: -1;
   content: "";
