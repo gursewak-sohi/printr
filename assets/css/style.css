@@ -943,12 +943,12 @@ footer {
 }
 @media (max-width: 991px) {
   .qoute-section {
-    padding: 108px 0 108px;
+    padding: 68px 0 148px;
   }
 }
 @media (max-width: 767px) {
   .qoute-section {
-    padding: 80px 0 30px;
+    padding: 30px 0 80px;
   }
 }
 
@@ -958,7 +958,7 @@ footer {
 }
 @media (max-width: 991px) {
   .qoute-block {
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
   }
 }
@@ -1002,7 +1002,7 @@ footer {
 }
 @media (max-width: 767px) {
   .qoute-text {
-    margin-bottom: 20px;
+    margin-top: 20px;
   }
 }
 .qoute-text img {
