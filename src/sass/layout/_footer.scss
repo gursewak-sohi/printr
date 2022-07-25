@@ -1,6 +1,6 @@
 // Footer SCSS
 footer {
-    padding: 40px 0 100px;
+    padding: 2.5rem 0 6.25rem;
     @include tablet {
         padding: 40px 0 80px;
     }
@@ -20,7 +20,7 @@ footer {
 }
 
 .footer-text {
-    max-width: 417px;
+    max-width: 26.063rem;
     @include tablet {
         margin-bottom: 60px;
     }
@@ -36,7 +36,7 @@ footer {
         width: 100%;
     }
     & ul {
-        margin-left: 100px;
+        margin-left: 6.25rem;
         @include tablet {
             margin-left: 50px;
             margin-right: 50px;

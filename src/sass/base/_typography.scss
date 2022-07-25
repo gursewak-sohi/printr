@@ -1,4 +1,21 @@
 // Typography SCSS
+:root {
+    --base-font-size: 1rem;
+    @include desktop {
+        --base-font-size: 0.9rem;
+    }
+    @include laptop {
+        --base-font-size: 0.8rem;
+    }
+    @include mobile {
+        --base-font-size: 1rem;
+    }
+}
+
+html {
+    font-size: var(--base-font-size);
+}
+
 a {
     color: $link;
     &:hover {
@@ -15,15 +32,15 @@ body {
     font-family: $font-outfit;
     font-weight: 400;
     color: $black;
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
     letter-spacing: -0.02em;
 }
 
 p {
     font-weight: 300;
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
     @include mobile {
         font-size: 16px;
         line-height: 26px;
